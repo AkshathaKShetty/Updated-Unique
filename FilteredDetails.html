@@ -1,0 +1,21 @@
+<div ng-app="myHome" ng-controller="HomePageCtrl">
+    <div class="panel panel-default">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4>Online Digital Store</h4>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div id="Products">
+                <div class="col-md-5" ng-repeat="item in filtered">
+                    <p><img ng-src="{{item.image}}"/></p>
+                    <p><span></span>Name: {{item.name}}</p>
+                    <p><span></span>Price: {{item.cost|currency:"INR "}}</p><p><span></span>Capacity: {{item.capacity}}</p>
+                </div>
+            </div>                      
+        </div>
+        <div class="panel-footer">
+            <a ui-sref="Home">Back to Products Page</a>
+        </div>
+        </div>
+    </div>
